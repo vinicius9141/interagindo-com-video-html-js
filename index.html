@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/style/style.css">
+    <title>Teste Prod - Reprodutor de Vídeo</title>
+</head>
+<body class="home">
+    <nav class="navBar"><img src="./src/img/Ativo 2.png" alt=""></nav>
+    
+    <div id="frame">
+        <video id="video" class="video" src="./src/videos/Prod-Vídeo-Exemplo-Interação.mp4" width="auto" height="375px"  ></video> <br>
+        <div class="controls">
+            <input type="image" src="./src/img/home.png" width="40" class="home" onclick="playPause()" style="border-radius: 20px; border: 1px solid #fff; margin: 5px; padding: 3px;">  </input>
+            <button class="makeBig" onclick="makeBig()"> Clique aqui para assistir o video em tela cheia</button>
+            <input type="image" src="./src/img/previous.png" width="40" onclick="makeSmall()" style="border-radius: 20px; border: 1px solid #fff; margin: 10px; padding: 3px;"></input>
+            <input type="image" src="./src/img/next.png" width="40" onclick="reset()" style="border-radius: 20px; border: 1px solid #fff; margin: 10px; padding: 3px;"></input>
+        </div>
+    </div>
+
+    <script>
+        var myVideo = document.querySelector('#video');
+        var divContainer = document.querySelector('#frame')
+        console.log(divContainer)
+
+
+        
+        function playPause(){
+            myVideo.play();
+            myVideo.currentTime = 1;
+        }
+
+        function makeBig(){
+            divContainer.offsetHeight =  window.screen.height;
+            divContainer.offsetWidth = window.screen.width;
+            myVideo.style.cssText = 'width: 80%; height: 80%; margin-right: auto; margin-left: auto;'
+            
+            
+
+            myVideo.pause();
+        }
+
+        function makeSmall(){
+            myVideo.currentTime = 16
+        }
+        function reset(){
+            myVideo.currentTime = 25
+        }
+    </script>
+</body>
+</html>

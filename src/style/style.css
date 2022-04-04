@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #101010;
+    background: -moz-linear-gradient(left, #101010 0%, #1A1A1A 66%, #000000 100%);
+    background: -webkit-linear-gradient(left, #101010 0%, #1A1A1A 66%, #000000 100%);
+    background: linear-gradient(to right, #101010 0%, #1A1A1A 66%, #000000 100%);
+}
+
+#frame{
+   display: flex;
+   flex-direction: column;
+   align-content: center;
+   justify-content: center;
+   align-items: center;
+
+}
+#video{
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.navBar{
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.makeBig{
+    width: 400px;
+    height: 40px;
+    background: #000;
+    color: #fff;
+    border-radius: 25px;
+    border: 1px solid #fff;
+}
+.controls{
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    margin: 20px;
+}
